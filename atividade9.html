@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabuada</title>
+   <meta charset="UTF-8">
+</head>
+<body>
+  <h2>9. Tabuada</h2> <input type="number" id="tab"> <button onclick="mostrarTabuada()">Mostrar</button> <p id="res9"></p>
+  <script>
+     function mostrarTabuada() {
+       let n = Number(document.getElementById('tab').value);
+       let res9 = document.getElementById('res9');
+       for (let i = 1; i <= 10; i++) { res9 += `${n} x ${i} = ${n * i}\n`; } document.getElementById('res9').innerText = res9; } 
+  </script>
+</body>
+</html>
