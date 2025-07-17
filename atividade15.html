@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>15. Consumo de Combustível</h2>
+  <input type="number" id="tempo" placeholder="Tempo (h)">
+  <input type="number" id="velocidade" placeholder="Velocidade Média (km/h)">
+  <button onclick="calcularConsumo()">Calcular</button>
+  <p id="res15"></p>
+  <script>
+    function calcularConsumo() {
+      let tempo = Number(document.getElementById('tempo').value);
+      let velocidade = Number(document.getElementById('velocidade').value);
+      let distancia = tempo * velocidade;
+      let litros = distancia / 12;
+
+      let texto = `Velocidade média: ${velocidade} km/h\n +
+                  Tempo gasto: ${tempo} h\n +
+                  Distância percorrida: ${distancia} km\n +
+                  Combustível usado: ${litros.toFixed(2)} litros`;
+      document.getElementById('res15').innerText = texto;
+    }
+  </script>
+</body>
+</html>
