@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Verificar Temperatura</title>
+</head>
+<body>
+  <h2>Exercício 4: Verificar como está a temperatura</h2>
+  <input type="number" id="temp" placeholder="Digite a temperatura (°C)">
+  <button onclick="verificarTemperatura()">Verificar</button>
+  <p id="resultado4"></p>
+
+  <script>
+    function verificarTemperatura() {
+      const t = parseFloat(document.getElementById("temp").value);
+      const resultado = document.getElementById("resultado4");
+
+      if (t < 18) {
+        resultado.innerText = "Está frio.";
+      } else if (t >= 18 && t <= 27) {
+        resultado.innerText = "Está agradável.";
+      } else {
+        resultado.innerText = "Está quente.";
+      }
+    }
+  </script>
+</body>
+</html>
