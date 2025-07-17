@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>14. Troca de Valores</h2>
+  <input type="number" id="valA" placeholder="Valor A">
+  <input type="number" id="valB" placeholder="Valor B">
+  <button onclick="trocarValores()">Trocar</button>
+  <p id="res14"></p>
+  <script>
+    function trocarValores() {
+      let A = Number(document.getElementById('valA').value);
+      let B = Number(document.getElementById('valB').value);
+      [A, B] = [B, A];
+      document.getElementById('res14').innerText =` Novo valor de A: ${A}, Novo valor de B: ${B}`;
+    }
+  </script>
+</body>
+</html>
