@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}html {
+  height: 100%;
+  width: 100%;
+}
+button{
+  width: 100px;
+  height: 100px;
+  background-color: #c72929;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+button:hover{
+  background-color: #8e3939
+}
