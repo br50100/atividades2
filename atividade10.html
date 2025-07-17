@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Soma de números de um array</h2>
+  <button onclick="somarArray()">Somar</button>
+  <p id="resultado10"></p>
+
+  <script>
+    function somarArray() {
+      let numeros = [5, 3, 8, 2, 9];
+      let soma = 0;
+
+      for (let i = 0; i < numeros.length; i++) {
+        soma += numeros[i];
+      }
+
+      document.getElementById("resultado10").innerText = "Soma do array: " + soma;
+    }
+  </script>
+</body>
+</html>
