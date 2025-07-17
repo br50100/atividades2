@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>12. Cálculo de Salário</h2>
+  <input type="number" id="ht" placeholder="Horas Trabalhadas">
+  <input type="number" id="vh" placeholder="Valor Hora">
+  <input type="number" id="pd" placeholder="% Desconto">
+  <button onclick="calcularSalario()">Calcular</button>
+  <p id="res12"></p>
+  <script>
+    function calcularSalario() {
+      let HT = Number(document.getElementById('ht').value);
+      let VH = Number(document.getElementById('vh').value);
+      let PD = Number(document.getElementById('pd').value);
+
+      let SB = HT * VH;
+      let TD = (PD / 100) * SB;
+      let SL = SB - TD;
+
+      let texto = `Horas Trabalhadas: ${HT}h\n +
+                  Salário Bruto: R$ ${SB.toFixed(2)}\n +
+                  Desconto: R$ ${TD.toFixed(2)}\n +
+                  Salário Líquido: R$ ${SL.toFixed(2)}`;
+      document.getElementById('res12').innerText = texto;
+    }
+
+  </script>
+</body>
+</html>
